@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% import "bootstrap/wtf.html" as wtf %}
+<body>
+<!--<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+<!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/upload-site.css') }}">
+
+<div> Upload an image to return the hex values of colors in the image </div>
+
+          {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+
+  <div class="file-upload-content">
+    <img class="file-upload-image" src="color_analysis_report.png" alt="Result" />
+  </div>
+
+</div>
+
+</body>
+</html>
